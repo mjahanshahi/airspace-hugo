@@ -2,6 +2,10 @@
 
 {{ if .Site.Data.service.enable }}
 <!-- Service Start -->
+<head>
+  <script src="https://kit.fontawesome.com/edda149e97.js"></script>
+</head>
+
 <section id="service">
   <div class="container">
 
@@ -16,7 +20,7 @@
     <!-- Content -->
     <div class="row">
       {{ range .Site.Data.service.content }}
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-4">
         <div class="service-item">
           <i class="{{ .icon }}"></i>
           <h4>{{ .name }}</h4>
