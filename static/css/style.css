@@ -1,7 +1,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
-
+@import url(https://fonts.googleapis.com/css?family=GFS+Didot&display=swap)
 /*
  * This css file includes styles added in the jekyll port of this theme.
  * To find the original style.css that ships with Airspace, read airspace.css
@@ -61,7 +61,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Didot';
+  font-family: 'GFS Didot', serif;
 }
 
 h2 {
@@ -214,7 +214,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 
 #slider .block h1 {
-  font-family: 'Didot';
+  font-family: 'GFS Didot', serif;
   font-weight: 400;
   font-size: 45px;
   line-height: 60px;
