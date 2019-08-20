@@ -2,6 +2,9 @@
 
 <!-- contact form start -->
 {{ with .Site.Params.contact }}
+
+<script src="https://kit.fontawesome.com/edda149e97.js">
+</script>
 <section id="contact-form">
   <div class="container">
 <div id="contact-box" class="row">
@@ -15,6 +18,9 @@
             </li>
             <li>
               <i class="fa fa-envelope-o"></i>{{ .box.email }}
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>{{ .box.phone }}
             </li>
           </ul>
           <ul class="social-icons">
