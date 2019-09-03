@@ -14,7 +14,7 @@
   {{ partial "global-header.html" . }}
   
   
-    <main class="container" style="margin-left: calc((100vw - 2*600px - 2*40px)/2);margin-right: auto;">
+    <main class="container">
     {{ range .Data.Pages }}
     <a href="{{ .Permalink }}" style="float: left;margin: 20px;">
         <img alt="{{ .Title }}" src="{{ .Params.cover }}">
