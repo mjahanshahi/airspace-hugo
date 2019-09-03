@@ -1,12 +1,23 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <main class="container" style="margin-left: calc((100vw - 2*600px - 2*40px)/2);margin-right: auto;">
-    {{ range .Data.Pages }}
-    <a href="{{ .Permalink }}" style="float: left;margin: 20px;">
-        <h1 id="title">{{ .Title }}</h1>
-        <img alt="{{ .Title }}" src="{{ .Params.cover }}">
-      </a>
-    {{ end }}
-    </main>
-  </body>
+<head>
+	
+	{{ partial "head.html" . }}
+
+</head>
+<body>
+
+	{{ partial "header.html" . }}
+
+	{{ partial "slider.html" . }}
+
+	{{ partial "wrapper.html" . }}
+
+	{{ partial "feature.html" . }}
+
+	{{ partial "call-to-action.html" . }}
+
+	{{ partial "footer.html" . }}
+
+</body>
 </html>
