@@ -560,7 +560,6 @@ font header .navbar-default .navbar-nav li a:hover {
   line-height: 40px;
   font-weight: 600;
   color: #333333;
-  text-transform: capitalize;
   position: relative;
 }
 
@@ -611,7 +610,8 @@ font header .navbar-default .navbar-nav li a:hover {
 
 #portfolio-work .block .portfolio-contant ul li {
   float: left;
-  width: 32.22%;
+  width: 300px;
+  height: 200px;
   overflow: hidden;
   margin: 6px;
   position: relative;
@@ -637,7 +637,6 @@ font header .navbar-default .navbar-nav li a:hover {
 
 #portfolio-work .block .portfolio-contant ul li a h2 {
   font-size: 22px;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
