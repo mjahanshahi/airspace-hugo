@@ -21,7 +21,7 @@
               <div class="portfolio-contant">
                 <ul id="portfolio-contant-active">
                   {{ range .Site.Data.work.portfolio }}
-                    <li class="mix {{ .category }}">
+                    <li class="{{ .category }}">
                       <a class="venobox" href="{{ $.Site.BaseURL }}{{ .image }}">
                         <img class="img-responsive" src="{{ $.Site.BaseURL }}{{ .image }}" />
                         <div class="overly">
