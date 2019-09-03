@@ -12,7 +12,9 @@
     {{ range .Data.Pages }}
     <a href="{{ .Permalink }}" style="float: left;margin: 20px;">
         <img alt="{{ .Title }}" src="{{ .Params.cover }}">
-        <p id="title">{{ .Title }}<p>
+        <div class="section-title">
+          <h2>{{ .Title }}</h2>
+          </div>
       </a>
     {{ end }}
     </main>
