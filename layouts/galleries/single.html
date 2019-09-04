@@ -2,68 +2,30 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     {{ partial "head.html" . }}
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>
-      {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
-    </title>
-
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/photoswipe.css"/>
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/default-skin/default-skin.css"/>
-    <script type="application/javascript" src="{{ .Site.BaseURL }}js/photoswipe.min.js"></script>
-    <script type="application/javascript" src="{{ .Site.BaseURL }}js/photoswipe-ui-default.min.js"></script>
-
   </head>
   <body>
     {{ partial "header.html" . }}
     {{ partial "global-header.html" . }}
-    <!-- Start copied from GitHub docs HugoPhotoSwipe -->
-
-    <main class="container">
-    <div class="gallery" itemscope itemtype="https://schema.org/ImageGallery">
-      {{ .Content }}
-    </div>
-
-    <div class="pswp" role="dialog" aria-hidden="true" tabindex="-1">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-            <button class="pswp__button pswp__button--share" title="Share"></button>
-            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
+      
+    <section>
+      <div class="home-carousel">
+        <div class="dark-mask"></div>
+        <div class="container">
+            <div class="homepage owl-carousel">
+                {{ range sort .Site.Data.carousel "weight" }}
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <img class="img-responsive" src="{{ .image }}" alt="">
+                        </div>
+                    </div>
                 </div>
-              </div>
+                {{ end }}
             </div>
-          </div>
-          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__center"></div>
-          </div>
         </div>
       </div>
-    </div>
-    </main>
-    <script type="application/javascript" src="{{ .Site.BaseURL }}js/pswp_gallery.js"></script>
-
-    <!-- End copied from GitHub docs HugoPhotoSwipe -->
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    </section>  
+    
     {{ partial "footer.html" . }}
   </body>
 </html>
